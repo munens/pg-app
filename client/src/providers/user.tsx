@@ -15,27 +15,27 @@ const UserProvider = () => {
 
   const navigateToLogin = () => navigate('/login');
 
-  useEffect(() => {
-    if (!token) {
-      navigateToLogin();
-    }
-  }, [token]);
+  // useEffect(() => {
+  //   if (!token) {
+  //     navigateToLogin();
+  //   }
+  // }, [token]);
 
-  useEffect(() => {
-    if (isSuccess) {
-      const { user } = authenticatedUser;
-      if (user) {
-        setUser(user);
-      }
-    }
-  }, [isSuccess, authenticatedUser]);
+  // useEffect(() => {
+  //   if (isSuccess) {
+  //     const { user } = authenticatedUser;
+  //     if (user) {
+  //       setUser(user);
+  //     }
+  //   }
+  // }, [isSuccess, authenticatedUser]);
 
-  useEffect(() => {
-    if (error?.status === 403) {
-      storageService.removeValueFromStorage(TOKEN_KEY);
-      navigateToLogin();
-    }
-  }, [error]);
+  // useEffect(() => {
+  //   if (error?.status === 403) {
+  //     storageService.removeValueFromStorage(TOKEN_KEY);
+  //     navigateToLogin();
+  //   }
+  // }, [error]);
 
   return (
     <UserContext.Provider value={{ user }}>

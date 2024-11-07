@@ -8,15 +8,12 @@ import {
   RouterProvider
 } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import UserProvider from './providers/user.tsx';
-import { Dashboard, Login } from './pages';
+import { Reservations, Login } from './pages';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route element={<UserProvider />}>
-        <Route element={<Dashboard />} path="/*" />
-      </Route>
+      <Route element={<Reservations />} path="/*" />
       <Route element={<Login />} path="/login" />
     </Route>
   )

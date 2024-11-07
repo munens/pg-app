@@ -25,6 +25,8 @@ export class Application {
 	) {}
 
 	init(): void {
+		
+		console.log('initialize');
 
 		const {
 			host,

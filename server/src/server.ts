@@ -2,6 +2,7 @@ import {config} from 'dotenv';
 
 // modules:
 import {UserModule} from './user';
+import {ReservationsModule} from './reservations';
 
 config();
 
@@ -17,8 +18,10 @@ const {
 import {Application} from './app';
 import {DatabaseConfig} from './database-config';
 
+
 const modules = [
-	new UserModule()
+	new ReservationsModule(),
+	new UserModule(),
 ];
 
 const databaseConfig: DatabaseConfig = {

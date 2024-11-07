@@ -38,7 +38,7 @@ const Login = () => {
           <div className="flex justify-end w-full">
             <Button.Primary
               onClick={onLoginPress}
-              text="Dashboard"
+              text="Reservations"
               type="button"
             />
           </div>
